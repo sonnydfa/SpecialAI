@@ -1,0 +1,12 @@
+import os
+
+# 폴더 경로
+folder_path = '/path/to/your/folder'
+
+# 폴더에 있는 파일 리스트
+file_list = os.listdir(folder_path)
+
+# 파일 개수 확인 (디렉토리 제외)
+file_count = len([file for file in file_list if os.path.isfile(os.path.join(folder_path, file))])
+
+print(f"폴더에 있는 파일 개수: {file_count}")
